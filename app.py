@@ -19,7 +19,7 @@ i4 = col4.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/mai
 
 st.sidebar.title("What to do") 
 app_mode = st.sidebar.selectbox("Choose the app mode",
-        ["Show instructions", "Run the app", "Show the source code"])
+        ["Show instructions", "Run the app", "Source code"])
 if app_mode == "Show instructions":
     st.sidebar.success('To continue select "Run the app".')
 elif app_mode == "Source code":
