@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import fastbook 
 from fastai import * 
 import os 
-import stremalit as st
+import stremlit as st
 import gdown 
 from PIL import Image 
 EXTERNAL_DEPENDENCIES = {
