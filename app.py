@@ -8,7 +8,7 @@ readme_text = st.markdown(get_file_content_as_string("README.md"))
 
 expander =  st.beta_expander(label='sample images',expanded=True)
 col1, col2 = st.beta_columns(2)
-col3,col4 = st.beta_columns(2),
+col3,col4 = st.beta_columns(2)
 expander(
     c1 = col1.markdown("<h2 style='text-align: center; color: gray;'>Dark image input</h1>", unsafe_allow_html=True),
     c2 = col2.markdown("<h2 style='text-align: center; color: gray;'>Enhanced image</h1>", unsafe_allow_html=True),
@@ -16,17 +16,16 @@ expander(
     i2 = col2.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output1.png', use_column_width=True),
     i3 = col3.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input2.png', use_column_width=True),
     i4 = col4.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output2.png' ,use_column_width=True))
-with expander:
-    
-    col1, col2 = st.beta_columns(2)
-    # col1.write('dark image input')
-    c1 = col1.markdown("<h2 style='text-align: center; color: gray;'>Dark image input</h1>", unsafe_allow_html=True)
-    c2 = col2.markdown("<h2 style='text-align: center; color: gray;'>Enhanced image</h1>", unsafe_allow_html=True)
-    i1 = col1.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input1.png' ,use_column_width=True)
-    i2 = col2.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output1.png', use_column_width=True)
-    col3,col4 = st.beta_columns(2)
-    i3 = col3.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input2.png', use_column_width=True)
-    i4 = col4.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output2.png' ,use_column_width=True)
+# with expander:
+#     col1, col2 = st.beta_columns(2)
+#     # col1.write('dark image input')
+#     c1 = col1.markdown("<h2 style='text-align: center; color: gray;'>Dark image input</h1>", unsafe_allow_html=True)
+#     c2 = col2.markdown("<h2 style='text-align: center; color: gray;'>Enhanced image</h1>", unsafe_allow_html=True)
+#     i1 = col1.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input1.png' ,use_column_width=True)
+#     i2 = col2.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output1.png', use_column_width=True)
+#     col3,col4 = st.beta_columns(2)
+#     i3 = col3.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input2.png', use_column_width=True)
+#     i4 = col4.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output2.png' ,use_column_width=True)
 st.sidebar.title("What to do")
 app_mode = st.sidebar.selectbox("Choose the app mode",
         ["Show instructions", "Run the app", "Show the source code"])
