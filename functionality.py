@@ -59,7 +59,7 @@ def predict(img,cho):
 def run_the_app():
     # choice = st.selectbox('which model do you want to load?',('1.Ashik\'s model','2.Som\'s model'))
     choice = st.radio(label = 'select model', options=['1.Som\'s model','2.Ashik\'s model'])
-    st.markdown('[@Someshfengde](https://github.com/someshfengde), [@ashikshafi08](https://github.com/ashikshafi08)')
+    st.markdown('**Models by:- **[@Someshfengde](https://github.com/someshfengde), [@ashikshafi08](https://github.com/ashikshafi08)')
     if choice :
         if choice =='1.Ashik\'s model':
             cho = 0
