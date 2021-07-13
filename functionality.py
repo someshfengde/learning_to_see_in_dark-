@@ -44,13 +44,14 @@ def get_file_content_as_string(path):
     return response.read().decode("utf-8")
 
 def predict(img,cho):
-    image = plt.imread(img)
+    image = Image.open(img).convert('RGB')
+    image_array = np.array(image)
     if cho == 0 : 
         mod_name = './first_model.pkl'
     elif cho == 1 : 
         mod_name = './four_hr_model.pkl'
     model = load_learner(mod_name)
-    prediction = model.predict(image)
+    prediction = model.predict(image_array)
     return prediction[0]
 
 
