@@ -7,8 +7,9 @@ readme_text = st.markdown(get_file_content_as_string("README.md"))
 
 with st.beta_container():
     col1, col2 = st.beta_columns(2)
-    col1.write('dark image input')
-    col2.write('enhanced image')
+    # col1.write('dark image input')
+    col1.markdown("<h1 style='text-align: center; color: red;'>Dark image input</h1>", unsafe_allow_html=True)
+    col2.markdown("<h1 style='text-align: center; color: red;'>Enhanced image</h1>", unsafe_allow_html=True)
     col1.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input1.png' ,use_column_width=True)
     col2.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output1.png', use_column_width=True)
     col3,col4 = st.beta_columns(2)
