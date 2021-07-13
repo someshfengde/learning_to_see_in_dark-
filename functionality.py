@@ -70,7 +70,7 @@ def run_the_app():
         img = st.file_uploader(label= 'upload image to convert it to daytime here',type = ['jpg','png','jpeg'])
 
 
-        if img: 
+        if cho ==0 or cho == 1 and img: 
             reshaped_image = Image.open(img).convert('RGB').reshape(224,224,3)
             st.image(reshaped_image,use_column_width=True,caption = 'your image')
             predicted_image = predict(img,cho)
