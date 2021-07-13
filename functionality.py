@@ -70,9 +70,9 @@ def run_the_app():
 
         if img: 
             reshaped_image = Image.open(img).convert('RGB').reshape(224,224,3)
-            st.image(reshaped_image,caption = 'your image')
+            st.image(reshaped_image,use_column_width=True,caption = 'your image')
             predicted_image = predict(img,cho)
-            st.image(predicted_image,caption = 'converted image')
+            st.image(predicted_image,use_column_width=True,caption = 'converted image')
         else : 
             st.write('upload the image first')
     else:
