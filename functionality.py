@@ -36,10 +36,6 @@ def download_file(file_path):
     finally:
         st.write('thanks for the patience')
 
-def load(modelname):
-    path = download_file(modelname)
-    model = load_model(path)
-    return model 
 
 def get_file_content_as_string(path):
     url = 'https://raw.githubusercontent.com/someshfengde/learning_to_see_in_dark-/main/' + path
@@ -52,7 +48,7 @@ def predict(img,cho):
         mod_name = './first_model.pkl'
     elif cho == 1 : 
         mod_name = './four_hr_model.pkl'
-    model = load_model(mod_name)
+    model = load_learner(mod_name)
     prediction = model.predict(image)
     return prediction[0]
 
