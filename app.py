@@ -4,6 +4,16 @@ from functionality import *
 st.title('learning to see in dark implementation')
 readme_text = st.markdown(get_file_content_as_string("README.md"))
 
+col1, col2 = st.beta_columns(2)
+container = st.beta_container()
+
+col1.header('dark image input')
+col2.header('enhanced image by our model')
+col1.image(https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input1.png)
+col2.image(https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output1.png)
+col3,col4 = st.beta_columns(2)
+col3.image(https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input2.png)
+col3.image(https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output2.png)
 st.sidebar.title("What to do")
 app_mode = st.sidebar.selectbox("Choose the app mode",
         ["Show instructions", "Run the app", "Show the source code"])
