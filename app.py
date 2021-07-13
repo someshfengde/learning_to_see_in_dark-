@@ -1,3 +1,4 @@
+from numpy.lib.shape_base import expand_dims
 import streamlit as st 
 from functionality import *
 
@@ -5,7 +6,8 @@ st.title('learning to see in dark implementation')
 readme_text = st.markdown(get_file_content_as_string("README.md"))
 
 
-with st.beta_expander(label='sample images'):
+expander =  st.beta_expander(label='sample images',expanded=True)
+with expander:
     col1, col2 = st.beta_columns(2)
     # col1.write('dark image input')
     col1.markdown("<h2 style='text-align: center; color: gray;'>Dark image input</h1>", unsafe_allow_html=True)
@@ -22,9 +24,11 @@ if app_mode == "Show instructions":
     st.sidebar.success('To continue select "Run the app".')
 elif app_mode == "Show the source code":
     readme_text.empty()
+    expander.empty()
     st.code(get_file_content_as_string("functionality.py"))
 elif app_mode == "Run the app":
     readme_text.empty()
+    expander.empty()
     run_the_app()
 
 
