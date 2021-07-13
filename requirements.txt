@@ -1,0 +1,5 @@
+rawpy 
+streamlit 
+fastai
+fastbook
+PIL
