@@ -29,6 +29,8 @@ elif app_mode == "Show the source code":
     i2.empty()
     i3.empty()
     i4.empty()
+    c1.empty()
+    c2.empty()
     st.code(get_file_content_as_string("functionality.py"))
 elif app_mode == "Run the app":
     readme_text.empty()
@@ -37,6 +39,8 @@ elif app_mode == "Run the app":
     i2.empty()
     i3.empty()
     i4.empty()
+    c1.empty()
+    c2.empty()
     run_the_app()
 
 
