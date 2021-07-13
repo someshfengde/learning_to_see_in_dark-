@@ -67,9 +67,10 @@ def run_the_app():
             download_file('four_hr_model.pkl')
         img = st.file_uploader(label= 'upload image to convert it to daytime here',type = ['jpg','png','jpeg'])
 
-        reshaped_image = Image.open(img).convert('RGB').reshape(224,224,3)
-        st.image(reshaped_image,caption = 'your image')
+
         if img: 
+            reshaped_image = Image.open(img).convert('RGB').reshape(224,224,3)
+            st.image(reshaped_image,caption = 'your image')
             predicted_image = predict(img,cho)
             st.image(predicted_image,caption = 'converted image')
         else : 
