@@ -44,7 +44,7 @@ def get_file_content_as_string(path):
     return response.read().decode("utf-8")
 
 def predict(img,cho):
-    image = Image.open(img)
+    image = plt.imread(img)
     if cho == 0 : 
         mod_name = './first_model.pkl'
     elif cho == 1 : 
