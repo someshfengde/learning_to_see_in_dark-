@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import fastbook 
 from fastai import * 
+from fastai.vision.all import *
 import os 
 import streamlit as st
 import gdown 
