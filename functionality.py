@@ -4,6 +4,7 @@ from fastai import *
 import os 
 import streamlit as st
 import gdown 
+import urllib
 from PIL import Image 
 EXTERNAL_DEPENDENCIES = {
     "first_model.pkl": {
