@@ -1,5 +1,5 @@
-rawpy 
 streamlit 
 fastai
 fastbook
-PIL
+PIL == 8.3.1
+gdown 
