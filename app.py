@@ -38,6 +38,8 @@ elif app_mode == "Source code":
     col1.empty()
     col2.empty()
     st.title('Code:')
+    st.markdown(
+        '## [github link](https://github.com/someshfengde/learning_to_see_in_dark)')
     st.code(get_file_content_as_string("app.py"))
     st.title('Functionality')
     st.code(get_file_content_as_string("functionality.py"))
