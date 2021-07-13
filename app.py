@@ -2,7 +2,7 @@ import streamlit as st
 from functionality import *
 
 st.title('learning to see in dark implementation')
-readme_text = st.markdown(get_file_content_as_string("Readme.md"))
+readme_text = st.markdown(get_file_content_as_string("README.md"))
 
 st.sidebar.title("What to do")
 app_mode = st.sidebar.selectbox("Choose the app mode",
