@@ -38,4 +38,7 @@ def download_file(file_path):
 download_file('four_hr_model.pkl')
 # %%
 
+image = st.file_uploader('upload image ', type = ['jpg','png','jpeg'])
+# %%
+image.shape
 # %%
