@@ -61,10 +61,10 @@ def run_the_app():
     choice = st.radio(label = 'select model', options=['1.Som\'s model','2.Ashik\'s model'])
     st.markdown('**Models by:- **[@Someshfengde](https://github.com/someshfengde), [@ashikshafi08](https://github.com/ashikshafi08)')
     if choice :
-        if choice =='1.Ashik\'s model':
+        if choice =='2.Ashik\'s model':
             cho = 0
             download_file('first_model.pkl')
-        elif choice == '2.Som\'s model':
+        elif choice == '1.Som\'s model':
             cho = 1
             download_file('four_hr_model.pkl')
         img = st.file_uploader(label= 'upload image to convert it to daytime here',type = ['jpg','png','jpeg'])
