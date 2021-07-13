@@ -40,6 +40,11 @@ def load(modelname):
     model = load_model(path)
     return model 
 
+def get_file_content_as_string(path):
+    url = 'https://raw.githubusercontent.com/someshfengde/learning_to_see_in_dark-/main/' + path
+    response = urllib.request.urlopen(url)
+    return response.read().decode("utf-8")
+
 def predict(img,cho):
     image = Image.open(img)
     if cho == 0 : 
