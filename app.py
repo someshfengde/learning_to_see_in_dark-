@@ -6,7 +6,7 @@ st.title('learning to see in dark implementation')
 readme_text = st.markdown(get_file_content_as_string("README.md"))
 
 
-expander =  st.beta_expander(label='sample images',expanded=True)
+# expander =  st.beta_expander(label='sample images',expanded=True)
 
 col1, col2 = st.beta_columns(2)
 c1 = col1.markdown("<h2 style='text-align: center; color: gray;'>Dark image input</h1>", unsafe_allow_html=True)
