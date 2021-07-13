@@ -17,12 +17,12 @@ col3,col4 = st.beta_columns(2)
 i3 = col3.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input2.png', use_column_width=True)
 i4 = col4.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output2.png' ,use_column_width=True)
 
-st.sidebar.title("What to do")
+st.sidebar.title("What to do") 
 app_mode = st.sidebar.selectbox("Choose the app mode",
         ["Show instructions", "Run the app", "Show the source code"])
 if app_mode == "Show instructions":
     st.sidebar.success('To continue select "Run the app".')
-elif app_mode == "Show the source code":
+elif app_mode == "Source code":
     readme_text.empty()
     i1.empty()
     i2.empty()
@@ -32,9 +32,9 @@ elif app_mode == "Show the source code":
     c2.empty()
     col1.empty()
     col2.empty()
-    st.title('code')
+    st.title('Code:')
     st.code(get_file_content_as_string("app.py"))
-    st.title('functinoality')
+    st.title('Functionality')
     st.code(get_file_content_as_string("functionality.py"))
 elif app_mode == "Run the app":
     readme_text.empty()
