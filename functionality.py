@@ -52,7 +52,7 @@ def predict(img,cho):
         mod_name = './four_hr_model.pkl'
     model = load_learner(mod_name)
     prediction = model.predict(image_array)
-    return prediction.squeeze(0) 
+    return prediction[0].numpy()
 
 
 def run_the_app():
