@@ -13,7 +13,7 @@ with st.beta_container():
     col2.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output1.png', use_column_width=True)
     col3,col4 = st.beta_columns(2)
     col3.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input2.png', use_column_width=True)
-    col3.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output2.png' ,use_column_width=True)
+    col4.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output2.png' ,use_column_width=True)
 st.sidebar.title("What to do")
 app_mode = st.sidebar.selectbox("Choose the app mode",
         ["Show instructions", "Run the app", "Show the source code"])
