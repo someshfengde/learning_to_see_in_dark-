@@ -1,5 +1,5 @@
 streamlit 
 fastai
 fastbook
-PIL == 8.3.1
+PIL = 8.3.1
 gdown 
