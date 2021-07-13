@@ -8,7 +8,7 @@ col1, col2 = st.beta_columns(2)
 container = st.beta_container()
 
 col1.header('dark image input')
-col2.header('enhanced image by our model')
+col2.header('enhanced image')
 col1.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input1.png' ,use_column_width=True)
 col2.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output1.png', use_column_width=True)
 col3,col4 = st.beta_columns(2)
