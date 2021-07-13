@@ -10,13 +10,13 @@ expander =  st.beta_expander(label='sample images',expanded=True)
 with expander:
     col1, col2 = st.beta_columns(2)
     # col1.write('dark image input')
-    col1.markdown("<h2 style='text-align: center; color: gray;'>Dark image input</h1>", unsafe_allow_html=True)
-    col2.markdown("<h2 style='text-align: center; color: gray;'>Enhanced image</h1>", unsafe_allow_html=True)
-    col1.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input1.png' ,use_column_width=True)
-    col2.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output1.png', use_column_width=True)
+    c1 = col1.markdown("<h2 style='text-align: center; color: gray;'>Dark image input</h1>", unsafe_allow_html=True)
+    c2 = col2.markdown("<h2 style='text-align: center; color: gray;'>Enhanced image</h1>", unsafe_allow_html=True)
+    i1 = col1.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input1.png' ,use_column_width=True)
+    o1 = col2.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output1.png', use_column_width=True)
     col3,col4 = st.beta_columns(2)
-    col3.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input2.png', use_column_width=True)
-    col4.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output2.png' ,use_column_width=True)
+    i3 = col3.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/input2.png', use_column_width=True)
+    i4 = col4.image('https://github.com/someshfengde/learning_to_see_in_dark/raw/main/images/output2.png' ,use_column_width=True)
 st.sidebar.title("What to do")
 app_mode = st.sidebar.selectbox("Choose the app mode",
         ["Show instructions", "Run the app", "Show the source code"])
@@ -25,10 +25,18 @@ if app_mode == "Show instructions":
 elif app_mode == "Show the source code":
     readme_text.empty()
     expander.empty()
+    c1.empty()
+    c2.empty()
+    c3.empty()
+    c4.empty()
     st.code(get_file_content_as_string("functionality.py"))
 elif app_mode == "Run the app":
     readme_text.empty()
     expander.empty()
+    c1.empty()
+    c2.empty()
+    c3.empty()
+    c4.empty()
     run_the_app()
 
 
