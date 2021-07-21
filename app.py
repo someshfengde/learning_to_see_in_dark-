@@ -23,6 +23,6 @@ else:
         code1 = st.code(get_file_content_as_string("app.py"))
         title_1 = st.title("Functionality")
         code2 = st.code(get_file_content_as_string("functionality.py"))
-    elif app_mode =='Run the app':
+    elif app_mode == 'Run the app':
         # st.balloons()
         run_the_app()
