@@ -60,15 +60,12 @@ def predict(img, cho):
 
 
 def run_the_app():
-    # choice = st.selectbox('which model do you want to load?',('1.Ashik\'s model','2.Som\'s model'))
-    choice = st.radio(label='select model', options=['1.Som\'s model', '2.Ashik\'s model'])
-    st.markdown(
-        '**Models by:- **[@Someshfengde](https://github.com/someshfengde), [@ashikshafi08](https://github.com/ashikshafi08)')
+    choice = st.radio(label='select model', options=['MODEL_S', 'MODEL_E'])
     if choice:
-        if choice == '2.Ashik\'s model':
+        if choice == 'MODEL_E':
             cho = 0
             download_file('first_model.pkl')
-        elif choice == '1.Som\'s model':
+        elif choice == 'MODEL_S':
             cho = 1
             download_file('four_hr_model.pkl')
         img = st.file_uploader(label='upload image to convert it to daytime here', type=['jpg', 'png', 'jpeg'])
