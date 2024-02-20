@@ -1,5 +1,5 @@
 streamlit 
 fastai
 fastbook
-Pillow==10.0.1
+Pillow==10.2.0
 gdown 
